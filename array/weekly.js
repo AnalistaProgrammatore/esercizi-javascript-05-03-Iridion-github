@@ -8,9 +8,9 @@ add = function (temp) {
   this.dataStore.push(temp)
 }
 
-addRandomTemps = function (days = 31, average = 20) {
+addRandomTemps = function (days = 31, limit = 20) {
   for (let x = 1; x <= days; x++) {
-    let randomTempLong = Math.random() * average
+    let randomTempLong = Math.random() * limit
     const randomTemp = Number(randomTempLong.toFixed(1)) //1 decimal. 
     thisMonth.add(randomTemp)
   }
