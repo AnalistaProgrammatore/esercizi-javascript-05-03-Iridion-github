@@ -1,3 +1,6 @@
+//Cosa mi costringete a fare ...
+const allWords = require('an-array-of-english-words')
+const aHundredWords = allWords.filter((w, i) => i < 101)
 /*
 3. Create a function that finds the second-smallest element in a data set. 
 Can you generalize the function definition for the third-smallest, fourth-smallest, and so on? 
@@ -16,7 +19,7 @@ const getRandomNumArray = (length) => {
 
 const numArr = getRandomNumArray(1000)
 
-const strArr = numArr.map(x => x.toString()) //Non ho alcuna voglia di crearmi un array di parole a caso, sorry, stringizzo i numeri e s'accontentamo, vè?
+const strArr = [...aHundredWords]
 
 const getSmallestOrShortest = (arr, bigger = 3) => {
   const results = []
