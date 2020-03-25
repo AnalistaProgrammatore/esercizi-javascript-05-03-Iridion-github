@@ -36,21 +36,19 @@ console.log(calculator.div())
 
 //--------------------------------------------------------------------------------
 
-class Calculator2 {
-  constructor(val) {
-    this.values = [...val]
-    this.add = function () {
-      return this.values.reduce((x, y) => x + y)
-    }
-    this.sub = function () {
-      return this.values.reduce((x, y) => x - y)
-    }
-    this.mul = function () {
-      return this.values.reduce((x, y) => x * y)
-    }
-    this.div = function () {
-      return (this.values.filter((x, i) => i > 0).includes(0) ? "Can't divide by zero." : this.values.reduce((x, y) => x / y))
-    }
+function Calculator2(val) {
+  this.values = [...val]
+  this.add = function () {
+    return this.values.reduce((x, y) => x + y)
+  }
+  this.sub = function () {
+    return this.values.reduce((x, y) => x - y)
+  }
+  this.mul = function () {
+    return this.values.reduce((x, y) => x * y)
+  }
+  this.div = function () {
+    return (this.values.filter((x, i) => i > 0).includes(0) ? "Can't divide by zero." : this.values.reduce((x, y) => x / y))
   }
 }
 
